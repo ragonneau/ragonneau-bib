@@ -17,9 +17,6 @@
 *.dvi
 *.xdv
 *-converted-to.*
-*.ps
-*.eps
-*.pdf
 
 ## Generated if empty string is given at "Please type another file name for output:"
 .pdf
@@ -41,9 +38,10 @@
 *.pdfsync
 
 ## Build tool directories for auxiliary files
+### latexrun
 latex.out/
 
-## Auxiliary and intermediate files from packages
+## Auxiliary and intermediate files from other packages
 ### algorithms
 *.alg
 *.loa
@@ -101,7 +99,7 @@ acs-*.bib
 *.eledsec[1-9][0-9][0-9]
 *.eledsec[1-9][0-9][0-9]R
 
-### glossaries/glossaries-extra
+### glossaries
 *.acn
 *.acr
 *.glg
@@ -110,6 +108,8 @@ acs-*.bib
 *.glsdefs
 *.lzo
 *.lzs
+
+### glossaries-extra
 *.ist
 
 ### gnuplottex
@@ -133,7 +133,6 @@ acs-*.bib
 
 ### knitr
 *-concordance.tex
-*.tikz
 *-tikzDictionary
 
 ### listings
@@ -236,5 +235,14 @@ pythontex-files-*/
 *.ttt
 *.fff
 
-### xwatermark package
+### Latexian
+TSWLatexianTemp*
+
+### standalone
+*.sta
+
+### Makeindex log files
+*.lpz
+
+### xwatermark
 *.xwm
