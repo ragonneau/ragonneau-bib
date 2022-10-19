@@ -1,4 +1,4 @@
-# BibLaΩTeX bibliography of Tom M. Ragonneau
+# BibLaTeX bibliography of Tom M. Ragonneau
 
 A BibLaTeX bibliography of Tom M. Ragonneau.
 
