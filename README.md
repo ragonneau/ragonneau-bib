@@ -1,5 +1,7 @@
 # BibLaTeX bibliography of Tom M. Ragonneau
 
+[![validate](https://github.com/ragonneau/ragonneau-bib/actions/workflows/validate.yml/badge.svg)](https://github.com/ragonneau/ragonneau-bib/actions/workflows/validate.yml)
+
 A BibLaTeX bibliography of Tom M. Ragonneau.
 
 ## Contents
