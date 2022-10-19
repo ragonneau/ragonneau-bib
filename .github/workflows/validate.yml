@@ -1,0 +1,34 @@
+# .github/workflows/validate.yml
+# GitHub Actions configuration file for validating the BibLaTeX files
+# See ?? for details
+
+name: validate
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+  workflow_dispatch:
+
+jobs:
+  validate:
+    name: Validate the BibLaTeX files
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      - name: Setup TeX Live
+        uses: teatimeguest/setup-texlive-action@v2
+        with:
+          packages: |
+            biber
+
+      - name: Run the validations
+        run: |
+          biber --tool --validate-datamodel strings.bib ragonneau.bib
+          biber --tool --validate-datamodel strings-long.bib ragonneau.bib
+          biber --tool --validate-datamodel strings.bib optim.bib
+          biber --tool --validate-datamodel strings-long.bib optim.bib
