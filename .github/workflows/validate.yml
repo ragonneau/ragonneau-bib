@@ -23,12 +23,17 @@ jobs:
       - name: Setup TeX Live
         uses: teatimeguest/setup-texlive-action@v2
         with:
-          packages: |
-            biber
+          packages: biber
 
       - name: Run the validations
         run: |
-          biber --dieondatamodel --validate-datamodel --output-file=ragonneau_bibertool.bib --tool strings.bib ragonneau.bib
-          biber --dieondatamodel --validate-datamodel --output-file=ragonneau-long_bibertool.bib --tool strings-long.bib ragonneau.bib
-          biber --dieondatamodel --validate-datamodel --output-file=optim_bibertool.bib --tool strings.bib optim.bib
-          biber --dieondatamodel --validate-datamodel --output-file=optim-long_bibertool.bib --tool strings-long.bib optim.bib
+          biber --dieondatamodel --no-default-datamodel --validate-config --validate-datamodel --output-file=ragonneau_bibertool.bib --tool strings.bib ragonneau.bib
+          biber --dieondatamodel --no-default-datamodel --validate-config --validate-datamodel --output-file=ragonneau-long_bibertool.bib --tool strings-long.bib ragonneau.bib
+          biber --dieondatamodel --no-default-datamodel --validate-config --validate-datamodel --output-file=optim_bibertool.bib --tool strings.bib optim.bib
+          biber --dieondatamodel --no-default-datamodel --validate-config --validate-datamodel --output-file=optim-long_bibertool.bib --tool strings-long.bib optim.bib
+
+      - name: Store artifacts
+        uses: actions/upload-artifact@v3
+        with:
+          path: "*_bibertool.bib"
+          if-no-files-found: error
