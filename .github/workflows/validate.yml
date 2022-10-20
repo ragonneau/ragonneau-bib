@@ -28,7 +28,7 @@ jobs:
 
       - name: Run the validations
         run: |
-          biber --tool --validate-datamodel strings.bib ragonneau.bib
-          biber --tool --validate-datamodel strings-long.bib ragonneau.bib
-          biber --tool --validate-datamodel strings.bib optim.bib
-          biber --tool --validate-datamodel strings-long.bib optim.bib
+          biber --dieondatamodel --validate-datamodel --output-file=ragonneau_bibertool.bib --tool strings.bib ragonneau.bib
+          biber --dieondatamodel --validate-datamodel --output-file=ragonneau-long_bibertool.bib --tool strings-long.bib ragonneau.bib
+          biber --dieondatamodel --validate-datamodel --output-file=optim_bibertool.bib --tool strings.bib optim.bib
+          biber --dieondatamodel --validate-datamodel --output-file=optim-long_bibertool.bib --tool strings-long.bib optim.bib

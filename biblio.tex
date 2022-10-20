@@ -1,0 +1,59 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[american]{babel}
+\usepackage[a4paper]{geometry}
+\usepackage{csquotes}
+
+\usepackage{hyperref}
+\usepackage{url}
+\hypersetup{
+    colorlinks=true,
+    allcolors=black,
+}
+
+\usepackage[
+    style=ext-numeric,
+    articlein=false,
+    sorting=nyt,
+    sortcites=false,
+    maxbibnames=99,
+]{biblatex}
+\DefineBibliographyStrings{american}{
+    bathesis={B\adddot A\adddotspace thesis},
+    mathesis={M\adddot A\adddotspace thesis},
+    phdthesis={Ph\adddot D\adddotspace thesis},
+}
+\addbibresource[label=strings]{strings.bib}
+\addbibresource[label=ragonneau]{ragonneau.bib}
+\addbibresource[label=optim]{optim.bib}
+
+\title{Bibliographies \texttt{ragonneau.bib} and \texttt{optim.bib}}
+\author{Tom M. Ragonneau%
+    \thanks{%
+        Department of Applied Mathematics,
+        The Hong Kong Polytechnic University
+        (\url{https://tomragonneau.com/}).
+    }
+}
+\date{\today}
+
+\begin{document}
+
+    \maketitle
+
+    \section{File \texttt{ragonneau.bib}}
+
+    \begin{refsection}[strings,ragonneau]
+        \nocite{*}
+        \printbibliography[heading=none]
+    \end{refsection}
+
+    \section{File \texttt{optim.bib}}
+
+    \begin{refsection}[strings,optim]
+        \nocite{*}
+        \printbibliography[heading=none]
+    \end{refsection}
+
+\end{document}

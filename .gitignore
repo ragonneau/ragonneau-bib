@@ -1,4 +1,5 @@
 # LaTeX
+
 ## Core latex/pdflatex auxiliary files
 *.aux
 *.lof
@@ -17,6 +18,10 @@
 *.dvi
 *.xdv
 *-converted-to.*
+# these rules might exclude image files for figures etc.
+*.ps
+*.eps
+*.pdf
 
 ## Generated if empty string is given at "Please type another file name for output:"
 .pdf
@@ -38,10 +43,12 @@
 *.pdfsync
 
 ## Build tool directories for auxiliary files
+
 ### latexrun
 latex.out/
 
 ## Auxiliary and intermediate files from other packages
+
 ### algorithms
 *.alg
 *.loa
@@ -108,9 +115,16 @@ acs-*.bib
 *.glsdefs
 *.lzo
 *.lzs
+*.slg
+*.slo
+*.sls
 
-### glossaries-extra
+### uncomment this for glossaries-extra (will ignore makeindex's style files!)
 *.ist
+
+### gnuplot
+*.gnuplot
+*.table
 
 ### gnuplottex
 *-gnuplottex-*
@@ -133,6 +147,8 @@ acs-*.bib
 
 ### knitr
 *-concordance.tex
+# TODO Uncomment the next line if you use knitr and want to ignore its generated tikz files
+# *.tikz
 *-tikzDictionary
 
 ### listings
@@ -184,6 +200,9 @@ _minted*
 ### scrwfile
 *.wrt
 
+### svg
+svg-inkscape/
+
 ### sympy
 *.sout
 *.sympy
@@ -207,6 +226,9 @@ pythontex-files-*/
 *.dpth
 *.md5
 *.auxlock
+
+### titletoc
+*.ptc
 
 ### todonotes
 *.tdo
@@ -238,17 +260,9 @@ pythontex-files-*/
 ### Latexian
 TSWLatexianTemp*
 
-### standalone
-*.sta
-
-### Makeindex log files
-*.lpz
-
-### xwatermark
-*.xwm
-
 # Covers JetBrains IDEs: IntelliJ, RubyMine, PhpStorm, AppCode, PyCharm, CLion, Android Studio, WebStorm and Rider
 # Reference: https://intellij-support.jetbrains.com/hc/en-us/articles/206544839
+
 ## User-specific stuff
 .idea/
 *.iml
