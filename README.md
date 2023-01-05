@@ -1,7 +1,7 @@
 # BibLaTeX bibliography of Tom M. Ragonneau
 
-[![validate](https://github.com/ragonneau/ragonneau-bib/actions/workflows/validate.yml/badge.svg)](https://github.com/ragonneau/ragonneau-bib/actions/workflows/validate.yml)
-[![validate](https://github.com/ragonneau/ragonneau-bib/actions/workflows/build.yml/badge.svg)](https://github.com/ragonneau/ragonneau-bib/actions/workflows/build.yml)
+![GitHub Workflow Status](https://img.shields.io/github/actions/workflow/status/ragonneau/ragonneau-bib/validate.yml?label=validate&logo=github&style=for-the-badge)
+![GitHub Workflow Status](https://img.shields.io/github/actions/workflow/status/ragonneau/ragonneau-bib/build.yml?logo=github&style=for-the-badge)
 
 A BibLaTeX bibliography of Tom M. Ragonneau.
 
